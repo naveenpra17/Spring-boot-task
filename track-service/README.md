@@ -16,3 +16,6 @@ functionalities of this application:
 		d.User can remove track
 
 		e can use h2 console for viewing
+
+		f swagger documentation funtionality is also added
+
