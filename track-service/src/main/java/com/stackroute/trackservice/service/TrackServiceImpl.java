@@ -86,4 +86,14 @@ public class TrackServiceImpl implements TrackService {
 
         return trackRepository.save(track);
     }
+
+    /**
+     * @param track this track is got from the track controller class
+     * @return returns the list of tracks from track repository
+     */
+    @Override
+    public List<Track> searchTrackByName(String track) {
+        List<Track> list=trackRepository.findByTrack(track);
+        return list;
+    }
 }

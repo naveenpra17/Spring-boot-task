@@ -83,4 +83,15 @@ public class TrackController {
         Track track = trackService.updateTrack(id,trackToBeUpdated);
         return new ResponseEntity<>(track, HttpStatus.OK);
     }
+
+    /**
+     * @param string this is the name of the track which we want to search
+     * @return this returns a list of tracks
+     */
+    @GetMapping("tracks/{string}")
+    public ResponseEntity<?> searchByName(@PathVariable String string){
+   List<Track> list= trackService.searchTrackByName(string);
+        return new ResponseEntity<>(list,HttpStatus.OK);
+    }
+
 }
